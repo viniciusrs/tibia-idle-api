@@ -50,5 +50,9 @@ export const CharacterSchema = new Schema({
     balance: {
         type: Number,
         required: 'Enter a main balance'
+    },
+    stamina: {
+        type: Number,
+        required: 'Enter a main stamina'
     }
 })
