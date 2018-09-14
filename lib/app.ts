@@ -23,6 +23,7 @@ class App {
     private mongoSetup(): void {
         (<any>mongoose).Promise = global.Promise;
         mongoose.connect(this.mongoUrl, { useNewUrlParser: true });
+        mongoose.set('useFindAndModify', false);
     }
 }
 

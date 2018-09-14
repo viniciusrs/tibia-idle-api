@@ -1,80 +1,84 @@
-interface Hunt {
-    id: Number,
-    name: String,
-    expPerMinute: Number,
-    goldPerMinute: Number,
-    locationId: Number
-}
+import { Hunt } from "../types/models/hunt.model";
 
-export const Hunts: Hunt[] = [
+export const hunts: Hunt[] = [
     {
         id: 1,
         name: 'Bat',
-        expPerMinute: 5,
-        goldPerMinute: 2,
-        locationId: 1
+        expPerStamina: 5,
+        goldPerStamina: 2,
+        locationId: 1,
+        power: 30
     },
     {
         id: 2,
         name: 'Cave Rat',
-        expPerMinute: 7,
-        goldPerMinute: 3,
-        locationId: 2
+        expPerStamina: 7,
+        goldPerStamina: 3,
+        locationId: 2,
+        power: 50
     },
     {
         id: 3,
         name: 'Spider',
-        expPerMinute: 10,
-        goldPerMinute: 4,
-        locationId: 1
+        expPerStamina: 10,
+        goldPerStamina: 4,
+        locationId: 1,
+        power: 300
     },
     {
         id: 4,
         name: 'Troll',
-        expPerMinute: 12,
-        goldPerMinute: 5,
-        locationId: 2
+        expPerStamina: 12,
+        goldPerStamina: 5,
+        locationId: 2,
+        power: 300
     },
     {
         id: 5,
         name: 'Bear',
-        expPerMinute: 15,
-        goldPerMinute: 5,
-        locationId: 1
+        expPerStamina: 15,
+        goldPerStamina: 5,
+        locationId: 1,
+        power: 300
     },
     {
         id: 6,
         name: 'Orc',
-        expPerMinute: 18,
-        goldPerMinute: 7,
-        locationId: 3
+        expPerStamina: 18,
+        goldPerStamina: 7,
+        locationId: 3,
+        power: 300
     },
     {
         id: 7,
         name: 'Skeleton',
-        expPerMinute: 21,
-        goldPerMinute: 9,
-        locationId: 2
+        expPerStamina: 21,
+        goldPerStamina: 9,
+        locationId: 2,
+        power: 300
     },
     {
         id: 8,
         name: 'Rotworm',
-        expPerMinute: 25,
-        goldPerMinute: 11,
-        locationId: 3
+        expPerStamina: 25,
+        goldPerStamina: 11,
+        locationId: 3,
+        power: 300
     },
     {
         id: 9,
         name: 'Minotaur',
-        expPerMinute: 30,
-        goldPerMinute: 13,
-        locationId: 5
+        expPerStamina: 30,
+        goldPerStamina: 13,
+        locationId: 5,
+        power: 300
     },
     {
         id: 10,
         name: 'Elf',
-        expPerMinute: 35,
-        goldPerMinute: 15,
-        locationId: 5
+        expPerStamina: 35,
+        goldPerStamina: 15,
+        locationId: 5,
+        power: 300
     }
 ];

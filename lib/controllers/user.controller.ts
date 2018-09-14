@@ -1,9 +1,11 @@
 import * as mongoose from "mongoose";
-import { UserSchema } from '../models/user.model';
+import { UserSchema } from '../types/schemas/user.schema';
 import { Request, Response } from "express";
 import * as jwt from "jsonwebtoken";
 import * as bcrypt from "bcrypt";
 import { key } from "../utils/jwt-secret";
+
+import { User } from "../types/models/user.model";
 
 const User = mongoose.model('User', UserSchema);
 
@@ -99,7 +101,7 @@ export class UserController {
                     return;
                 }
 
-                let userResponse= {
+                let userResponse: User = {
                     token: '',
                     id: '',
                     username: '',
@@ -112,7 +114,7 @@ export class UserController {
                     userResponse.email = val.get('email');
                 });
 
-                jwt.sign({username: userResponse.username}, key, {expiresIn: '1h'}, (err, token) => {
+                jwt.sign({username: userResponse.username}, key, {expiresIn: '10h'}, (err, token) => {
                     if (err) {
                         res.status(500).send({
                             "message-en": "Error while generating a token",

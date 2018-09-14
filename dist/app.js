@@ -19,6 +19,7 @@ class App {
     mongoSetup() {
         mongoose.Promise = global.Promise;
         mongoose.connect(this.mongoUrl, { useNewUrlParser: true });
+        mongoose.set('useFindAndModify', false);
     }
 }
 exports.default = new App().app;

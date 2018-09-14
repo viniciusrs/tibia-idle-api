@@ -20,4 +20,4 @@ exports.UserSchema = new Schema({
         required: 'Enter a premium'
     }
 });
-//# sourceMappingURL=user.model.js.map
+//# sourceMappingURL=user.schema.js.map

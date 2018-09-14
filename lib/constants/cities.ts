@@ -1,9 +1,4 @@
-interface City {
-    id: Number,
-    name: String,
-    minExp: Number,
-    price: Number,
-}
+import { City } from "../types/models/city.model";
 
 export const cities: City[] = [ 
     {

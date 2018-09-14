@@ -1,13 +1,15 @@
 import { Request, Response } from 'express';
 
 import { UserController } from '../controllers/user.controller';
-import { CharacterController } from '../controllers/character.cotroller';
+import { CharacterController } from '../controllers/character.controller';
+import { HuntController } from '../controllers/hunt.controller';
 
 import { UserMiddleware } from '../middlewares/user.middleware';
 
 export class Routes {
     private userController: UserController = new UserController();
-    private characteController: CharacterController = new CharacterController();
+    private characterController: CharacterController = new CharacterController();
+    private huntController: HuntController = new HuntController();
 
     private userMiddleware: UserMiddleware = new UserMiddleware();
 
@@ -17,14 +19,18 @@ export class Routes {
 
     public routes(app): void {
         //USER
-        app.route('/user/register').post(this.userMiddleware.generateHash, this.userController.register);
-        app.route('/user/login').post(this.userController.login);
-        app.route('/user/:id').get(this.userController.getUser)
-                              .put(this.userMiddleware.verifyToken, this.userController.updateUserPassword);
+        app.route('/user/register').post(this.userMiddleware.generateHash, (req, res) => this.userController.register(req, res));
+        app.route('/user/login').post((req, res) => this.userController.login(req, res));
+        app.route('/user/:id').get((req, res) => this.userController.getUser(req, res))
+                              .put(this.userMiddleware.verifyToken, (req, res) => this.userController.updateUserPassword(req, res));
 
         //Character
-        app.route('/character/new').post(this.userMiddleware.verifyToken, this.characteController.newCharacter);
-        
+        app.route('/character/new').post(this.userMiddleware.verifyToken, (req, res) => this.characterController.newCharacter(req, res));
+        app.route('/character/:id').get(this.userMiddleware.verifyToken, (req, res) => this.characterController.getCharacter(req, res));
+        app.route('/character/all/:id').get(this.userMiddleware.verifyToken, (req, res) => this.characterController.getAllCharacters(req, res));
+
+        //Hunt
+        app.route('/hunt/start').post(this.userMiddleware.verifyToken, (req, res) => this.huntController.startHunt(req, res));
 
         app.route('*')
             .get((req: Request, res: Response) => {

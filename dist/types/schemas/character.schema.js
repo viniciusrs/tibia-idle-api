@@ -19,25 +19,25 @@ exports.CharacterSchema = new Schema({
         type: Number,
         required: 'Enter a experience'
     },
+    nextLevelExp: {
+        type: Number,
+        required: 'Enter a next level exp'
+    },
+    level: {
+        type: Number,
+        required: 'Enter a level'
+    },
     vocationId: {
         type: Number,
         required: 'Enter a vocation'
     },
-    magicLevelExp: {
+    mainSkillLevel: {
         type: Number,
-        required: 'Enter a magic level'
+        required: 'Enter a main Skill level'
     },
-    meleeLevelExp: {
-        type: Number,
-        required: 'Enter a melee level'
-    },
-    shieldLevelExp: {
+    shieldLevel: {
         type: Number,
         required: 'Enter a shield level'
-    },
-    distanceLevelExp: {
-        type: Number,
-        required: 'Enter a distance level'
     },
     currentLocationId: {
         type: Number,
@@ -50,6 +50,14 @@ exports.CharacterSchema = new Schema({
     balance: {
         type: Number,
         required: 'Enter a main balance'
+    },
+    stamina: {
+        type: Number,
+        required: 'Enter a main stamina'
+    },
+    active: {
+        type: Boolean,
+        required: 'Enter if is this active'
     }
 });
-//# sourceMappingURL=character.model.js.map
+//# sourceMappingURL=character.schema.js.map

@@ -65,7 +65,6 @@ class CharacterController {
         });
     }
     mapCharacter(character) {
-        console.log(character);
         if (character.length > 1) {
             let char = [];
             character.map(val => {
@@ -79,7 +78,7 @@ class CharacterController {
                     level: val.get('level'),
                     vocationId: val.get('vocationId'),
                     mainSkillLevel: val.get('mainSkillLevel'),
-                    shieldLevel: val.get('shieldLevelExp'),
+                    shieldLevel: val.get('shieldLevel'),
                     currentLocationId: val.get('currentLocationId'),
                     mainLocationId: val.get('mainLocationId'),
                     balance: val.get('balance'),
@@ -102,7 +101,7 @@ class CharacterController {
                     level: val.get('level'),
                     vocationId: val.get('vocationId'),
                     mainSkillLevel: val.get('mainSkillLevel'),
-                    shieldLevel: val.get('shieldLevelExp'),
+                    shieldLevel: val.get('shieldLevel'),
                     currentLocationId: val.get('currentLocationId'),
                     mainLocationId: val.get('mainLocationId'),
                     balance: val.get('balance'),
@@ -115,4 +114,4 @@ class CharacterController {
     }
 }
 exports.CharacterController = CharacterController;
-//# sourceMappingURL=character.cotroller.js.map
+//# sourceMappingURL=character.controller.js.map

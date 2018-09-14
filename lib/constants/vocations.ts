@@ -1,9 +1,6 @@
-interface Vocation {
-    id: Number,
-    name: String
-}
+import { Vocation } from "../types/models/vocation.model";
 
-export const Vocations: Vocation[] = [
+export const vocations: Vocation[] = [
     {
         id: 1,
         name: 'Knight'

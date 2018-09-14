@@ -1,1 +1,1 @@
-{"version":3,"file":"vocations.js","sourceRoot":"","sources":["../../lib/constants/vocations.ts"],"names":[],"mappings":";;AAKa,QAAA,SAAS,GAAe;IACjC;QACI,EAAE,EAAE,CAAC;QACL,IAAI,EAAE,QAAQ;KACjB;CACJ,CAAA"}
+{"version":3,"file":"vocations.js","sourceRoot":"","sources":["../../lib/constants/vocations.ts"],"names":[],"mappings":";;AAEa,QAAA,SAAS,GAAe;IACjC;QACI,EAAE,EAAE,CAAC;QACL,IAAI,EAAE,QAAQ;KACjB;CACJ,CAAA"}

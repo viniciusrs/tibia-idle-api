@@ -1,22 +1,28 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const user_controller_1 = require("../controllers/user.controller");
-const character_cotroller_1 = require("../controllers/character.cotroller");
+const character_controller_1 = require("../controllers/character.controller");
+const hunt_controller_1 = require("../controllers/hunt.controller");
 const user_middleware_1 = require("../middlewares/user.middleware");
 class Routes {
     constructor() {
         this.userController = new user_controller_1.UserController();
-        this.characteController = new character_cotroller_1.CharacterController();
+        this.characterController = new character_controller_1.CharacterController();
+        this.huntController = new hunt_controller_1.HuntController();
         this.userMiddleware = new user_middleware_1.UserMiddleware();
     }
     routes(app) {
         //USER
-        app.route('/user/register').post(this.userMiddleware.generateHash, this.userController.register);
-        app.route('/user/login').post(this.userController.login);
-        app.route('/user/:id').get(this.userController.getUser)
-            .put(this.userMiddleware.verifyToken, this.userController.updateUserPassword);
+        app.route('/user/register').post(this.userMiddleware.generateHash, (req, res) => this.userController.register(req, res));
+        app.route('/user/login').post((req, res) => this.userController.login(req, res));
+        app.route('/user/:id').get((req, res) => this.userController.getUser(req, res))
+            .put(this.userMiddleware.verifyToken, (req, res) => this.userController.updateUserPassword(req, res));
         //Character
-        app.route('/character/new').post(this.userMiddleware.verifyToken, this.characteController.newCharacter);
+        app.route('/character/new').post(this.userMiddleware.verifyToken, (req, res) => this.characterController.newCharacter(req, res));
+        app.route('/character/:id').get(this.userMiddleware.verifyToken, (req, res) => this.characterController.getCharacter(req, res));
+        app.route('/character/all/:id').get(this.userMiddleware.verifyToken, (req, res) => this.characterController.getAllCharacters(req, res));
+        //Hunt
+        app.route('/hunt/start').post(this.userMiddleware.verifyToken, (req, res) => this.huntController.startHunt(req, res));
         app.route('*')
             .get((req, res) => {
             res.status(200).send({

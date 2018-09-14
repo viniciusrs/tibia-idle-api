@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose = require("mongoose");
-const user_model_1 = require("../models/user.model");
+const user_schema_1 = require("../types/schemas/user.schema");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const jwt_secret_1 = require("../utils/jwt-secret");
-const User = mongoose.model('User', user_model_1.UserSchema);
+const User = mongoose.model('User', user_schema_1.UserSchema);
 class UserController {
     constructor() {
     }
@@ -95,7 +95,7 @@ class UserController {
                     userResponse.username = val.get('username');
                     userResponse.email = val.get('email');
                 });
-                jwt.sign({ username: userResponse.username }, jwt_secret_1.key, { expiresIn: '1h' }, (err, token) => {
+                jwt.sign({ username: userResponse.username }, jwt_secret_1.key, { expiresIn: '10h' }, (err, token) => {
                     if (err) {
                         res.status(500).send({
                             "message-en": "Error while generating a token",
