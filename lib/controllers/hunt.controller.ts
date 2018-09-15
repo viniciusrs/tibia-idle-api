@@ -2,6 +2,7 @@ import * as mongoose from "mongoose";
 import { Request, Response } from "express";
 
 import { hunts } from "../constants/hunts";
+import { levelExp } from "../constants/expvalues";
 
 import { Hunt, HuntSuccess, HuntFailed } from "../types/models/hunt.model";
 import { Character } from "types/models/character.model";
@@ -17,6 +18,30 @@ export class HuntController {
 
     constructor() {
 
+    }
+
+    public getHuntsByCity(req: Request, res: Response): void {
+        let cityId = +req.params.id;
+
+        let huntByCity: Hunt[] = [];
+        
+        hunts.map(value => {
+            if(cityId === value.locationId) {
+                huntByCity.push(value);
+            }
+        });
+
+        if(!huntByCity.length) {
+            res.status(404).send({
+                "message-en": "Hunt not found",
+                "message-pt": "Hunt não encontrado"
+            });
+
+            return;
+        }
+
+        res.json(huntByCity);
+        return;
     }
 
     public startHunt(req: Request, res: Response): void {
@@ -121,12 +146,12 @@ export class HuntController {
         } else {
             char.level++;
             let aux = xpGain - char.nextLevelExp;
-            let nextLevelcalc = (40 * (char.level ** 2)) + (120 * char.level) - 200;
+            let nextLevelcalc = levelExp[char.level];
             let nextLevelExp = nextLevelcalc - aux;
 
             while(nextLevelExp < 0) {
                 char.level++;
-                nextLevelcalc = (40 * (char.level ** 2)) + (120 * char.level) - 200;
+                nextLevelcalc = levelExp[char.level];
                 nextLevelExp = nextLevelcalc - nextLevelExp;
             }
 
@@ -159,7 +184,7 @@ export class HuntController {
             };
         }
 
-        let nextLevelcalc = (40 * (char.level ** 2)) + (120 * char.level) - 200;
+        let nextLevelcalc = levelExp[char.level];
 
         let progress = nextLevelcalc - char.nextLevelExp;
 

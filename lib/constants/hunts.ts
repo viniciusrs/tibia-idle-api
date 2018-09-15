@@ -23,7 +23,7 @@ export const hunts: Hunt[] = [
         expPerStamina: 10,
         goldPerStamina: 4,
         locationId: 1,
-        power: 300
+        power: 80
     },
     {
         id: 4,
@@ -31,15 +31,15 @@ export const hunts: Hunt[] = [
         expPerStamina: 12,
         goldPerStamina: 5,
         locationId: 2,
-        power: 300
+        power: 120
     },
     {
         id: 5,
         name: 'Bear',
         expPerStamina: 15,
-        goldPerStamina: 5,
+        goldPerStamina: 2,
         locationId: 1,
-        power: 300
+        power: 160
     },
     {
         id: 6,
@@ -47,15 +47,15 @@ export const hunts: Hunt[] = [
         expPerStamina: 18,
         goldPerStamina: 7,
         locationId: 3,
-        power: 300
+        power: 200
     },
     {
         id: 7,
         name: 'Skeleton',
         expPerStamina: 21,
-        goldPerStamina: 9,
+        goldPerStamina: 7,
         locationId: 2,
-        power: 300
+        power: 240
     },
     {
         id: 8,
@@ -63,7 +63,7 @@ export const hunts: Hunt[] = [
         expPerStamina: 25,
         goldPerStamina: 11,
         locationId: 3,
-        power: 300
+        power: 280
     },
     {
         id: 9,
@@ -79,6 +79,6 @@ export const hunts: Hunt[] = [
         expPerStamina: 35,
         goldPerStamina: 15,
         locationId: 5,
-        power: 300
+        power: 400
     }
 ];

@@ -2,12 +2,31 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose = require("mongoose");
 const hunts_1 = require("../constants/hunts");
+const expvalues_1 = require("../constants/expvalues");
 const character_schema_1 = require("../types/schemas/character.schema");
 const character_controller_1 = require("./character.controller");
 const Character = mongoose.model('Character', character_schema_1.CharacterSchema);
 class HuntController {
     constructor() {
         this.characterController = new character_controller_1.CharacterController();
+    }
+    getHuntsByCity(req, res) {
+        let cityId = +req.params.id;
+        let huntByCity = [];
+        hunts_1.hunts.map(value => {
+            if (cityId === value.locationId) {
+                huntByCity.push(value);
+            }
+        });
+        if (!huntByCity.length) {
+            res.status(404).send({
+                "message-en": "Hunt not found",
+                "message-pt": "Hunt não encontrado"
+            });
+            return;
+        }
+        res.json(huntByCity);
+        return;
     }
     startHunt(req, res) {
         const characterId = req.body.characterId;
@@ -91,11 +110,11 @@ class HuntController {
         else {
             char.level++;
             let aux = xpGain - char.nextLevelExp;
-            let nextLevelcalc = (40 * (Math.pow(char.level, 2))) + (120 * char.level) - 200;
+            let nextLevelcalc = expvalues_1.levelExp[char.level];
             let nextLevelExp = nextLevelcalc - aux;
             while (nextLevelExp < 0) {
                 char.level++;
-                nextLevelcalc = (40 * (Math.pow(char.level, 2))) + (120 * char.level) - 200;
+                nextLevelcalc = expvalues_1.levelExp[char.level];
                 nextLevelExp = nextLevelcalc - nextLevelExp;
             }
             char.experience += xpGain;
@@ -122,7 +141,7 @@ class HuntController {
                 staminaLost: stamina
             };
         }
-        let nextLevelcalc = (40 * (Math.pow(char.level, 2))) + (120 * char.level) - 200;
+        let nextLevelcalc = expvalues_1.levelExp[char.level];
         let progress = nextLevelcalc - char.nextLevelExp;
         if (xpLost > progress) {
             char.level--;

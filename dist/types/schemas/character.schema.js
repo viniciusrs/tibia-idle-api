@@ -5,59 +5,67 @@ const Schema = mongoose.Schema;
 exports.CharacterSchema = new Schema({
     userId: {
         type: String,
-        required: 'Enter a userId'
+        required: true
     },
     name: {
         type: String,
-        required: 'Enter a name'
+        required: true
     },
     sex: {
         type: String,
-        required: 'Enter a sex'
+        required: true
     },
     experience: {
         type: Number,
-        required: 'Enter a experience'
+        required: true
     },
     nextLevelExp: {
         type: Number,
-        required: 'Enter a next level exp'
+        required: true
     },
     level: {
         type: Number,
-        required: 'Enter a level'
+        required: true
     },
     vocationId: {
         type: Number,
-        required: 'Enter a vocation'
+        required: true
     },
     mainSkillLevel: {
         type: Number,
-        required: 'Enter a main Skill level'
+        required: true
+    },
+    nextMainSkillExp: {
+        type: Number,
+        required: true
     },
     shieldLevel: {
         type: Number,
-        required: 'Enter a shield level'
+        required: true
+    },
+    nextShieldSkillExp: {
+        type: Number,
+        required: true
     },
     currentLocationId: {
         type: Number,
-        required: 'Enter a current Location'
+        required: true
     },
     mainLocationId: {
         type: Number,
-        required: 'Enter a main Location'
+        required: true
     },
     balance: {
         type: Number,
-        required: 'Enter a main balance'
+        required: true
     },
     stamina: {
         type: Number,
-        required: 'Enter a main stamina'
+        required: true
     },
     active: {
         type: Boolean,
-        required: 'Enter if is this active'
+        required: true
     }
 });
 //# sourceMappingURL=character.schema.js.map
