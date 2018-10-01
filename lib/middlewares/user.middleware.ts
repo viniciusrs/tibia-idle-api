@@ -10,7 +10,7 @@ export class UserMiddleware {
     
     public generateHash(req: Request, res: Response, next: NextFunction): void {
         if(!req.body.password) {
-            res.status(500);
+            res.sendStatus(500);
             return;
         }
 
@@ -50,5 +50,28 @@ export class UserMiddleware {
                 next();
             }
         });
+    }
+
+    public reauthenticate(req: Request, res: Response, next: NextFunction): void {
+        const token = req.headers['authorization'];
+
+        if (!token) {
+            res.sendStatus(401);
+            return;
+        }
+
+        const decoded: any = jwt.decode(token);
+
+        try {
+            req.body = {
+                username: decoded.username,
+                password: decoded.password
+            }     
+        } catch(e) {
+            res.status(400).send({error: 'Invalid token'});
+            return;
+        }
+
+        next();
     }
 }

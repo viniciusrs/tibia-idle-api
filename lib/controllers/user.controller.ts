@@ -28,6 +28,8 @@ export class UserController {
                 return;
             }
 
+            req.body.premium = false;
+
             let newUser = new User(req.body);
 
             newUser.save((err, user) => {
@@ -35,7 +37,10 @@ export class UserController {
                     res.send(err);
                     return;
                 }
-                res.sendStatus(200);
+                res.status(200).send({
+                    "message-en": "User registered with success!",
+                    "message-pt": "Usuário registrado com sucesso!"
+                });
                 return;
             })
         })
@@ -114,7 +119,7 @@ export class UserController {
                     userResponse.email = val.get('email');
                 });
 
-                jwt.sign({username: userResponse.username}, key, {expiresIn: '10h'}, (err, token) => {
+                jwt.sign({username: req.body.username, password: req.body.password}, key, {expiresIn: '10h'}, (err, token) => {
                     if (err) {
                         res.status(500).send({
                             "message-en": "Error while generating a token",

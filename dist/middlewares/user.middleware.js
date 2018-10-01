@@ -8,7 +8,7 @@ class UserMiddleware {
     }
     generateHash(req, res, next) {
         if (!req.body.password) {
-            res.status(500);
+            res.sendStatus(500);
             return;
         }
         bcrypt.hash(req.body.password, 2, (err, hash) => {
@@ -42,6 +42,25 @@ class UserMiddleware {
                 next();
             }
         });
+    }
+    reauthenticate(req, res, next) {
+        const token = req.headers['authorization'];
+        if (!token) {
+            res.sendStatus(401);
+            return;
+        }
+        const decoded = jwt.decode(token);
+        try {
+            req.body = {
+                username: decoded.username,
+                password: decoded.password
+            };
+        }
+        catch (e) {
+            res.status(400).send({ error: 'Invalid token' });
+            return;
+        }
+        next();
     }
 }
 exports.UserMiddleware = UserMiddleware;

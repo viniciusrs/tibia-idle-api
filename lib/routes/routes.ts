@@ -23,6 +23,7 @@ export class Routes {
         //USER
         app.route('/user/register').post(this.userMiddleware.generateHash, (req, res) => this.userController.register(req, res));
         app.route('/user/login').post((req, res) => this.userController.login(req, res));
+        app.route('/user/reauthenticate').post(this.userMiddleware.reauthenticate, (req, res) => this.userController.login(req, res));
         app.route('/user/:id').get((req, res) => this.userController.getUser(req, res))
                               .put(this.userMiddleware.verifyToken, (req, res) => this.userController.updateUserPassword(req, res));
 

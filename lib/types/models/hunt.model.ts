@@ -1,10 +1,11 @@
 export interface Hunt {
     id: number,
-    name: String,
+    name: string,
     expPerStamina: number,
     goldPerStamina: number,
     locationId: number,
-    power: number
+    power: number,
+    image: string;
 }
 
 export interface HuntSuccess {

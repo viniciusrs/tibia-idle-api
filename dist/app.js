@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const routes_1 = require("./routes/routes");
 class App {
     constructor() {
@@ -15,11 +16,20 @@ class App {
     }
     config() {
         this.app.use(bodyParser.json());
+        this.app.use(cors());
+        this.app.use(this.logRequestStart);
     }
     mongoSetup() {
         mongoose.Promise = global.Promise;
         mongoose.connect(this.mongoUrl, { useNewUrlParser: true });
         mongoose.set('useFindAndModify', false);
+    }
+    logRequestStart(req, res, next) {
+        console.info(`${req.method} ${req.originalUrl}`);
+        res.on('finish', () => {
+            console.info(`${res.statusCode} ${res.statusMessage};`);
+        });
+        next();
     }
 }
 exports.default = new App().app;
