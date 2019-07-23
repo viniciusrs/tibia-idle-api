@@ -5,7 +5,7 @@ import { hunts } from "../constants/hunts";
 import { levelExp } from "../constants/expvalues";
 
 import { Hunt, HuntSuccess, HuntFailed } from "../types/models/hunt.model";
-import { Character } from "types/models/character.model";
+import { Character } from "../types/models/character.model";
 
 import { CharacterSchema } from "../types/schemas/character.schema";
 

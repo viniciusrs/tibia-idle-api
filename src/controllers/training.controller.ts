@@ -3,7 +3,7 @@ import { Request, Response } from "express";
 
 import { mainSkillExp, shieldingExp } from "../constants/expvalues";
 
-import { Character } from "types/models/character.model";
+import { Character } from "../types/models/character.model";
 
 import { CharacterSchema } from "../types/schemas/character.schema";
 import { CharacterController } from "./character.controller";
