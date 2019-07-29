@@ -15,7 +15,7 @@ export class UserController {
     }
 
     public register(req: Request, res: Response) {
-        User.find({ $or:[ {'username': req.body.usarname }, {'email': req.body.email} ]}, (err, user) => {
+        User.find({ $or:[ {'username': req.body.username }, {'email': req.body.email} ]}, (err, user) => {
             if(err) {
                 res.send(err);
                 return;
