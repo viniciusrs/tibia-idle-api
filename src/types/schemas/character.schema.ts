@@ -63,8 +63,16 @@ export const CharacterSchema = new Schema({
         type: Number,
         required: true
     },
+    inventorySize: {
+        type: Number,
+        required: true
+    },
+    listInventory: {
+        type: [Number],
+        required: true
+    },
     active: {
         type: Boolean,
         required: true
-    }
+    },
 })

@@ -8,7 +8,9 @@ export const hunts: Hunt[] = [
         goldPerStamina: 2,
         locationId: 1,
         power: 30,
-        image: 'bat'
+        image: 'bat',
+        itemDrop: [1],
+        dropRate: [1]
     },
     {
         id: 2,
@@ -17,7 +19,9 @@ export const hunts: Hunt[] = [
         goldPerStamina: 3,
         locationId: 1,
         power: 50,
-        image: 'cave-rat'
+        image: 'cave-rat',
+        itemDrop: [1],
+        dropRate: [1]
     },
     {
         id: 3,
@@ -26,7 +30,9 @@ export const hunts: Hunt[] = [
         goldPerStamina: 4,
         locationId: 1,
         power: 80,
-        image: 'spider'
+        image: 'spider',
+        itemDrop: [1],
+        dropRate: [1]
     },
     {
         id: 4,
@@ -35,7 +41,9 @@ export const hunts: Hunt[] = [
         goldPerStamina: 5,
         locationId: 1,
         power: 120,
-        image: 'troll'
+        image: 'troll',
+        itemDrop: [1],
+        dropRate: [1]
     },
     {
         id: 5,
@@ -44,7 +52,9 @@ export const hunts: Hunt[] = [
         goldPerStamina: 2,
         locationId: 1,
         power: 160,
-        image: 'bear'
+        image: 'bear',
+        itemDrop: [1],
+        dropRate: [1]
     },
     {
         id: 6,
@@ -53,7 +63,9 @@ export const hunts: Hunt[] = [
         goldPerStamina: 7,
         locationId: 1,
         power: 200,
-        image: 'orc'
+        image: 'orc',
+        itemDrop: [1],
+        dropRate: [1]
     },
     {
         id: 7,
@@ -62,7 +74,9 @@ export const hunts: Hunt[] = [
         goldPerStamina: 7,
         locationId: 1,
         power: 240,
-        image: 'skeleton'
+        image: 'skeleton',
+        itemDrop: [1],
+        dropRate: [1]
     },
     {
         id: 8,
@@ -71,7 +85,9 @@ export const hunts: Hunt[] = [
         goldPerStamina: 11,
         locationId: 1,
         power: 280,
-        image: 'rotworm'
+        image: 'rotworm',
+        itemDrop: [1],
+        dropRate: [1]
     },
     {
         id: 9,
@@ -80,7 +96,9 @@ export const hunts: Hunt[] = [
         goldPerStamina: 13,
         locationId: 1,
         power: 300,
-        image: 'minotaur'
+        image: 'minotaur',
+        itemDrop: [1],
+        dropRate: [1]
     },
     {
         id: 10,
@@ -89,6 +107,8 @@ export const hunts: Hunt[] = [
         goldPerStamina: 15,
         locationId: 1,
         power: 400,
-        image: 'elf'
+        image: 'elf',
+        itemDrop: [1],
+        dropRate: [1]
     }
 ];

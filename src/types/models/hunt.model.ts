@@ -5,7 +5,9 @@ export interface Hunt {
     goldPerStamina: number,
     locationId: number,
     power: number,
-    image: string;
+    itemDrop: [number],
+    dropRate: [number],
+    image: string
 }
 
 export interface HuntSuccess {
