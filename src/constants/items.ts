@@ -22,7 +22,9 @@ export const items: Item[] = [
         primaryAttr: 0,
         buyPrice: 0,
         sellPrice: 0,
-        buyable: false,
+        buyable: true, 
+        minLevel: 1,
+
     },
     {
         id: 2,
@@ -35,7 +37,8 @@ export const items: Item[] = [
         primaryAttr: 1,
         buyPrice: 2,
         sellPrice: 1,
-        buyable: false,
+        buyable: true, 
+        minLevel: 1,
 
     },
     {
@@ -49,7 +52,8 @@ export const items: Item[] = [
         primaryAttr: 2,
         buyPrice: 4,
         sellPrice: 2,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -63,7 +67,8 @@ export const items: Item[] = [
         primaryAttr: 2,
         buyPrice: 4,
         sellPrice: 2,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -77,7 +82,8 @@ export const items: Item[] = [
         primaryAttr: 2,
         buyPrice: 4,
         sellPrice: 2,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -91,7 +97,8 @@ export const items: Item[] = [
         primaryAttr: 4,
         buyPrice: 10,
         sellPrice: 5,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -105,7 +112,8 @@ export const items: Item[] = [
         primaryAttr: 6,
         buyPrice: 15,
         sellPrice: 7,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -119,7 +127,8 @@ export const items: Item[] = [
         primaryAttr: 5,
         buyPrice: 20,
         sellPrice: 10,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -133,7 +142,8 @@ export const items: Item[] = [
         primaryAttr: 4,
         buyPrice: 30,
         sellPrice: 15,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -147,7 +157,8 @@ export const items: Item[] = [
         primaryAttr: 6,
         buyPrice: 50,
         sellPrice: 25,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -161,7 +172,8 @@ export const items: Item[] = [
         primaryAttr: 9,
         buyPrice: 80,
         sellPrice: 40,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
     },
     {
         id: 100,
@@ -174,7 +186,8 @@ export const items: Item[] = [
         primaryAttr: 0,
         buyPrice: 0,
         sellPrice: 0,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
     },
     {
         id: 101,
@@ -187,7 +200,8 @@ export const items: Item[] = [
         primaryAttr: 0,
         buyPrice: 0,
         sellPrice: 0,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
     },
     {
         id: 102,
@@ -200,7 +214,8 @@ export const items: Item[] = [
         primaryAttr: 0,
         buyPrice: 0,
         sellPrice: 0,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
     },
     {
         id: 103,
@@ -213,7 +228,8 @@ export const items: Item[] = [
         primaryAttr: 0,
         buyPrice: 0,
         sellPrice: 0,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
     },
     {
         id: 104,
@@ -226,7 +242,8 @@ export const items: Item[] = [
         primaryAttr: 0,
         buyPrice: 0,
         sellPrice: 0,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
     },
     {
         id: 105,
@@ -239,7 +256,8 @@ export const items: Item[] = [
         primaryAttr: 0,
         buyPrice: 0,
         sellPrice: 0,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
     },
     {
         id: 106,
@@ -252,7 +270,8 @@ export const items: Item[] = [
         primaryAttr: 0,
         buyPrice: 0,
         sellPrice: 0,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
     },
     {
         id: 107,
@@ -265,7 +284,8 @@ export const items: Item[] = [
         primaryAttr: 0,
         buyPrice: 0,
         sellPrice: 0,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
     },
     {
         id: 108,
@@ -278,7 +298,8 @@ export const items: Item[] = [
         primaryAttr: 0,
         buyPrice: 0,
         sellPrice: 0,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
     },
     {
         id: 109,
@@ -291,7 +312,8 @@ export const items: Item[] = [
         primaryAttr: 0,
         buyPrice: 0,
         sellPrice: 0,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
     },
     {
         id: 110,
@@ -304,7 +326,8 @@ export const items: Item[] = [
         primaryAttr: 0,
         buyPrice: 0,
         sellPrice: 0,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
     },
     {
         id: 200,
@@ -317,7 +340,8 @@ export const items: Item[] = [
         primaryAttr: 0,
         buyPrice: 0,
         sellPrice: 0,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
     },
     {
         id: 201,
@@ -330,7 +354,8 @@ export const items: Item[] = [
         primaryAttr: 1,
         buyPrice: 2,
         sellPrice: 1,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -344,7 +369,8 @@ export const items: Item[] = [
         primaryAttr: 2,
         buyPrice: 4,
         sellPrice: 2,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -358,7 +384,8 @@ export const items: Item[] = [
         primaryAttr: 2,
         buyPrice: 4,
         sellPrice: 2,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -372,7 +399,8 @@ export const items: Item[] = [
         primaryAttr: 2,
         buyPrice: 4,
         sellPrice: 2,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -386,8 +414,8 @@ export const items: Item[] = [
         primaryAttr: 4,
         buyPrice: 10,
         sellPrice: 5,
-        buyable: false,
-
+        buyable: false, 
+        minLevel: 1,
     },
     {
         id: 206,
@@ -400,7 +428,8 @@ export const items: Item[] = [
         primaryAttr: 6,
         buyPrice: 15,
         sellPrice: 7,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -414,7 +443,8 @@ export const items: Item[] = [
         primaryAttr: 5,
         buyPrice: 20,
         sellPrice: 10,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -428,7 +458,8 @@ export const items: Item[] = [
         primaryAttr: 4,
         buyPrice: 30,
         sellPrice: 15,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -442,7 +473,8 @@ export const items: Item[] = [
         primaryAttr: 6,
         buyPrice: 50,
         sellPrice: 25,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -456,7 +488,8 @@ export const items: Item[] = [
         primaryAttr: 9,
         buyPrice: 80,
         sellPrice: 40,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
     },
     {
         id: 300,
@@ -469,7 +502,8 @@ export const items: Item[] = [
         primaryAttr: 0,
         buyPrice: 0,
         sellPrice: 0,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
     },
     {
         id: 301,
@@ -482,7 +516,8 @@ export const items: Item[] = [
         primaryAttr: 1,
         buyPrice: 2,
         sellPrice: 1,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -496,7 +531,8 @@ export const items: Item[] = [
         primaryAttr: 2,
         buyPrice: 4,
         sellPrice: 2,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -510,7 +546,8 @@ export const items: Item[] = [
         primaryAttr: 2,
         buyPrice: 4,
         sellPrice: 2,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -524,7 +561,8 @@ export const items: Item[] = [
         primaryAttr: 2,
         buyPrice: 4,
         sellPrice: 2,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -538,7 +576,8 @@ export const items: Item[] = [
         primaryAttr: 4,
         buyPrice: 10,
         sellPrice: 5,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -552,7 +591,8 @@ export const items: Item[] = [
         primaryAttr: 6,
         buyPrice: 15,
         sellPrice: 7,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -566,7 +606,8 @@ export const items: Item[] = [
         primaryAttr: 5,
         buyPrice: 20,
         sellPrice: 10,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -580,7 +621,8 @@ export const items: Item[] = [
         primaryAttr: 4,
         buyPrice: 30,
         sellPrice: 15,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -594,7 +636,8 @@ export const items: Item[] = [
         primaryAttr: 6,
         buyPrice: 50,
         sellPrice: 25,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -608,7 +651,8 @@ export const items: Item[] = [
         primaryAttr: 9,
         buyPrice: 80,
         sellPrice: 40,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
     },
     {
         id: 400,
@@ -622,6 +666,7 @@ export const items: Item[] = [
         buyPrice: 0,
         sellPrice: 0,
         buyable: false,
+         minLevel: 1,
     },
     {
         id: 401,
@@ -634,7 +679,8 @@ export const items: Item[] = [
         primaryAttr: 1,
         buyPrice: 2,
         sellPrice: 1,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -648,7 +694,8 @@ export const items: Item[] = [
         primaryAttr: 2,
         buyPrice: 4,
         sellPrice: 2,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -662,7 +709,8 @@ export const items: Item[] = [
         primaryAttr: 2,
         buyPrice: 4,
         sellPrice: 2,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -676,7 +724,8 @@ export const items: Item[] = [
         primaryAttr: 2,
         buyPrice: 4,
         sellPrice: 2,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -690,7 +739,8 @@ export const items: Item[] = [
         primaryAttr: 4,
         buyPrice: 10,
         sellPrice: 5,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -704,7 +754,8 @@ export const items: Item[] = [
         primaryAttr: 6,
         buyPrice: 15,
         sellPrice: 7,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -718,7 +769,8 @@ export const items: Item[] = [
         primaryAttr: 5,
         buyPrice: 20,
         sellPrice: 10,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -732,7 +784,8 @@ export const items: Item[] = [
         primaryAttr: 4,
         buyPrice: 30,
         sellPrice: 15,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -746,7 +799,8 @@ export const items: Item[] = [
         primaryAttr: 6,
         buyPrice: 50,
         sellPrice: 25,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -760,12 +814,13 @@ export const items: Item[] = [
         primaryAttr: 9,
         buyPrice: 80,
         sellPrice: 40,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
     },
     {
         id: 1000,
         imageSource: '',
-        name: 'Staff de Algodao',
+        name: 'Staff de Madeira',
         type: 'Arma',
         class: [0],
         power: 2,
@@ -773,7 +828,8 @@ export const items: Item[] = [
         primaryAttr: 0,
         buyPrice: 0,
         sellPrice: 0,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
     },
     {
         id: 1001,
@@ -786,7 +842,8 @@ export const items: Item[] = [
         primaryAttr: 1,
         buyPrice: 2,
         sellPrice: 1,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -800,7 +857,8 @@ export const items: Item[] = [
         primaryAttr: 2,
         buyPrice: 4,
         sellPrice: 2,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -814,7 +872,8 @@ export const items: Item[] = [
         primaryAttr: 2,
         buyPrice: 4,
         sellPrice: 2,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -828,8 +887,8 @@ export const items: Item[] = [
         primaryAttr: 2,
         buyPrice: 4,
         sellPrice: 2,
-        buyable: false,
-
+        buyable: false, 
+        minLevel: 1,
     },
     {
         id: 1005,
@@ -842,8 +901,8 @@ export const items: Item[] = [
         primaryAttr: 4,
         buyPrice: 10,
         sellPrice: 5,
-        buyable: false,
-
+        buyable: false, 
+        minLevel: 1,
     },
     {
         id: 1006,
@@ -856,8 +915,8 @@ export const items: Item[] = [
         primaryAttr: 6,
         buyPrice: 15,
         sellPrice: 7,
-        buyable: false,
-
+        buyable: false, 
+        minLevel: 1,
     },
     {
         id: 1007,
@@ -870,8 +929,8 @@ export const items: Item[] = [
         primaryAttr: 5,
         buyPrice: 20,
         sellPrice: 10,
-        buyable: false,
-
+        buyable: false, 
+        minLevel: 1,
     },
     {
         id: 1008,
@@ -884,7 +943,8 @@ export const items: Item[] = [
         primaryAttr: 4,
         buyPrice: 30,
         sellPrice: 15,
-        buyable: false,
+        buyable: false, 
+        minLevel: 1,
 
     },
     {
@@ -899,7 +959,7 @@ export const items: Item[] = [
         buyPrice: 50,
         sellPrice: 25,
         buyable: false,
-
+        minLevel: 1,
     },
     {
         id: 1010,
@@ -913,6 +973,7 @@ export const items: Item[] = [
         buyPrice: 80,
         sellPrice: 40,
         buyable: false,
+        minLevel: 1,
     },
     {
         id: 1011,
@@ -926,6 +987,7 @@ export const items: Item[] = [
         buyPrice: 80,
         sellPrice: 40,
         buyable: false,
+        minLevel: 1,
     },
     {
         id: 1012,
@@ -939,6 +1001,7 @@ export const items: Item[] = [
         buyPrice: 80,
         sellPrice: 40,
         buyable: false,
+        minLevel: 1,
     },
     {
         id: 1013,
@@ -952,5 +1015,6 @@ export const items: Item[] = [
         buyPrice: 80,
         sellPrice: 40,
         buyable: false,
+        minLevel: 1,
     },
 ]

@@ -4,6 +4,7 @@ import { UserController } from '../controllers/user.controller';
 import { CharacterController } from '../controllers/character.controller';
 import { HuntController } from '../controllers/hunt.controller';
 import { TrainingController } from '../controllers/training.controller';
+import { ItemController } from '../controllers/item.controller'
 
 import { UserMiddleware } from '../middlewares/user.middleware';
 
@@ -12,6 +13,7 @@ export class Routes {
     private characterController: CharacterController = new CharacterController();
     private huntController: HuntController = new HuntController();
     private trainingController: TrainingController = new TrainingController();
+    private itemController: ItemController = new ItemController();
 
     private userMiddleware: UserMiddleware = new UserMiddleware();
 
@@ -31,6 +33,11 @@ export class Routes {
         app.route('/character/new').post(this.userMiddleware.verifyToken, (req: Request, res: Response) => this.characterController.newCharacter(req, res));
         app.route('/character/:id').get(this.userMiddleware.verifyToken, (req: Request, res: Response) => this.characterController.getCharacter(req, res));
         app.route('/character/all/:id').get(this.userMiddleware.verifyToken, (req: Request, res: Response) => this.characterController.getAllCharacters(req, res));
+
+        // Item
+        app.route('/item/all').get((req: Request, res: Response) => this.itemController.getAllItems(req, res));
+        app.route('/item/shop').get((req: Request, res: Response) => this.itemController.getShopItems(req, res));
+        app.route('/item/:id').get((req: Request, res: Response) => this.itemController.getItemById(req, res));
 
         //Hunt
         app.route('/hunt/start').post(this.userMiddleware.verifyToken, (req: Request, res: Response) => this.huntController.startHunt(req, res));

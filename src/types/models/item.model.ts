@@ -10,4 +10,5 @@ export interface Item {
     buyPrice: number,
     sellPrice: number,
     buyable: boolean,
+    minLevel: number,
 }
