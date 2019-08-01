@@ -12,7 +12,7 @@ import { Item } from '../types/models/item.model'
 
 export const items: Item[] = [
     {
-        id: 1,
+        _id: 1,
         imageSource: '',
         name: 'Camiseta de Algodao',
         type: 'Armadura',
@@ -27,7 +27,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 2,
+        _id: 2,
         imageSource: '',
         name: 'Jaqueta de Couro',
         type: 'Armadura',
@@ -42,7 +42,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 3,
+        _id: 3,
         imageSource: '',
         name: 'Armadura de Couro',
         type: 'Armadura',
@@ -52,12 +52,12 @@ export const items: Item[] = [
         primaryAttr: 2,
         buyPrice: 4,
         sellPrice: 2,
-        buyable: false, 
+        buyable: true, 
         minLevel: 1,
 
     },
     {
-        id: 4,
+        _id: 4,
         imageSource: '',
         name: 'Armadura de Osso',
         type: 'Armadura',
@@ -67,12 +67,12 @@ export const items: Item[] = [
         primaryAttr: 2,
         buyPrice: 4,
         sellPrice: 2,
-        buyable: false, 
+        buyable: true, 
         minLevel: 1,
 
     },
     {
-        id: 5,
+        _id: 5,
         imageSource: '',
         name: 'Vestimenta de Couro',
         type: 'Armadura',
@@ -82,12 +82,12 @@ export const items: Item[] = [
         primaryAttr: 2,
         buyPrice: 4,
         sellPrice: 2,
-        buyable: false, 
+        buyable: true, 
         minLevel: 1,
 
     },
     {
-        id: 6,
+        _id: 6,
         imageSource: '',
         name: 'Cota de Malha',
         type: 'Armadura',
@@ -97,12 +97,12 @@ export const items: Item[] = [
         primaryAttr: 4,
         buyPrice: 10,
         sellPrice: 5,
-        buyable: false, 
+        buyable: true, 
         minLevel: 1,
 
     },
     {
-        id: 7,
+        _id: 7,
         imageSource: '',
         name: 'Armadura de Escamas',
         type: 'Armadura',
@@ -112,12 +112,12 @@ export const items: Item[] = [
         primaryAttr: 6,
         buyPrice: 15,
         sellPrice: 7,
-        buyable: false, 
+        buyable: true, 
         minLevel: 1,
 
     },
     {
-        id: 8,
+        _id: 8,
         imageSource: '',
         name: 'Armadura de Latão',
         type: 'Armadura',
@@ -127,12 +127,12 @@ export const items: Item[] = [
         primaryAttr: 5,
         buyPrice: 20,
         sellPrice: 10,
-        buyable: false, 
+        buyable: true, 
         minLevel: 1,
 
     },
     {
-        id: 9,
+        _id: 9,
         imageSource: '',
         name: 'Armadura de Bronze',
         type: 'Armadura',
@@ -142,12 +142,12 @@ export const items: Item[] = [
         primaryAttr: 4,
         buyPrice: 30,
         sellPrice: 15,
-        buyable: false, 
+        buyable: true, 
         minLevel: 1,
 
     },
     {
-        id: 10,
+        _id: 10,
         imageSource: '',
         name: 'Armadura de Aço',
         type: 'Armadura',
@@ -157,12 +157,12 @@ export const items: Item[] = [
         primaryAttr: 6,
         buyPrice: 50,
         sellPrice: 25,
-        buyable: false, 
+        buyable: true, 
         minLevel: 1,
 
     },
     {
-        id: 11,
+        _id: 11,
         imageSource: '',
         name: 'Armadura de Placas',
         type: 'Armadura',
@@ -176,7 +176,7 @@ export const items: Item[] = [
         minLevel: 1,
     },
     {
-        id: 100,
+        _id: 100,
         imageSource: '',
         name: 'Calça de Algodao',
         type: 'Calça',
@@ -190,7 +190,7 @@ export const items: Item[] = [
         minLevel: 1,
     },
     {
-        id: 101,
+        _id: 101,
         imageSource: '',
         name: 'Calça de Couro',
         type: 'Calça',
@@ -204,7 +204,7 @@ export const items: Item[] = [
         minLevel: 1,
     },
     {
-        id: 102,
+        _id: 102,
         imageSource: '',
         name: 'Grevas de Couro',
         type: 'Calça',
@@ -218,7 +218,7 @@ export const items: Item[] = [
         minLevel: 1,
     },
     {
-        id: 103,
+        _id: 103,
         imageSource: '',
         name: 'Grevas de Osso',
         type: 'Calça',
@@ -232,7 +232,7 @@ export const items: Item[] = [
         minLevel: 1,
     },
     {
-        id: 104,
+        _id: 104,
         imageSource: '',
         name: 'Saia Romana de Couro',
         type: 'Calça',
@@ -246,7 +246,7 @@ export const items: Item[] = [
         minLevel: 1,
     },
     {
-        id: 105,
+        _id: 105,
         imageSource: '',
         name: 'Calça de Malha',
         type: 'Calça',
@@ -260,7 +260,7 @@ export const items: Item[] = [
         minLevel: 1,
     },
     {
-        id: 106,
+        _id: 106,
         imageSource: '',
         name: 'Calça de Escamas',
         type: 'Calça',
@@ -274,7 +274,7 @@ export const items: Item[] = [
         minLevel: 1,
     },
     {
-        id: 107,
+        _id: 107,
         imageSource: '',
         name: 'Calça de Latão',
         type: 'Calça',
@@ -288,7 +288,7 @@ export const items: Item[] = [
         minLevel: 1,
     },
     {
-        id: 108,
+        _id: 108,
         imageSource: '',
         name: 'Calça de Bronze',
         type: 'Calça',
@@ -302,7 +302,7 @@ export const items: Item[] = [
         minLevel: 1,
     },
     {
-        id: 109,
+        _id: 109,
         imageSource: '',
         name: 'Calça de Aço',
         type: 'Calça',
@@ -316,7 +316,7 @@ export const items: Item[] = [
         minLevel: 1,
     },
     {
-        id: 110,
+        _id: 110,
         imageSource: '',
         name: 'Calça de Placas',
         type: 'Calça',
@@ -330,7 +330,7 @@ export const items: Item[] = [
         minLevel: 1,
     },
     {
-        id: 200,
+        _id: 200,
         imageSource: '',
         name: 'Luvas de Algodao',
         type: 'Luva',
@@ -344,7 +344,7 @@ export const items: Item[] = [
         minLevel: 1,
     },
     {
-        id: 201,
+        _id: 201,
         imageSource: '',
         name: 'Bracelete de Couro',
         type: 'Luva',
@@ -359,7 +359,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 202,
+        _id: 202,
         imageSource: '',
         name: 'Manopla de Couro',
         type: 'Luva',
@@ -374,7 +374,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 203,
+        _id: 203,
         imageSource: '',
         name: 'Manopla de Osso',
         type: 'Luva',
@@ -389,7 +389,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 204,
+        _id: 204,
         imageSource: '',
         name: 'Luvas de Couro',
         type: 'Luva',
@@ -404,7 +404,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 205,
+        _id: 205,
         imageSource: '',
         name: 'Luvas de Malha',
         type: 'Luva',
@@ -418,7 +418,7 @@ export const items: Item[] = [
         minLevel: 1,
     },
     {
-        id: 206,
+        _id: 206,
         imageSource: '',
         name: 'Manopla de Escamas',
         type: 'Luva',
@@ -433,7 +433,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 207,
+        _id: 207,
         imageSource: '',
         name: 'Manopla de Latão',
         type: 'Luva',
@@ -448,7 +448,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 208,
+        _id: 208,
         imageSource: '',
         name: 'Manopla de Bronze',
         type: 'Luva',
@@ -463,7 +463,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 209,
+        _id: 209,
         imageSource: '',
         name: 'Manopla de Aço',
         type: 'Luva',
@@ -478,7 +478,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 210,
+        _id: 210,
         imageSource: '',
         name: 'Manopla de Placas',
         type: 'Luva',
@@ -492,7 +492,7 @@ export const items: Item[] = [
         minLevel: 1,
     },
     {
-        id: 300,
+        _id: 300,
         imageSource: '',
         name: 'Luvas de Algodao',
         type: 'Luva',
@@ -506,7 +506,7 @@ export const items: Item[] = [
         minLevel: 1,
     },
     {
-        id: 301,
+        _id: 301,
         imageSource: '',
         name: 'Bracelete de Couro',
         type: 'Luva',
@@ -521,7 +521,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 302,
+        _id: 302,
         imageSource: '',
         name: 'Manopla de Couro',
         type: 'Luva',
@@ -536,7 +536,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 303,
+        _id: 303,
         imageSource: '',
         name: 'Manopla de Osso',
         type: 'Luva',
@@ -551,7 +551,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 304,
+        _id: 304,
         imageSource: '',
         name: 'Luvas de Couro',
         type: 'Luva',
@@ -566,7 +566,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 305,
+        _id: 305,
         imageSource: '',
         name: 'Luvas de Malha',
         type: 'Luva',
@@ -581,7 +581,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 306,
+        _id: 306,
         imageSource: '',
         name: 'Manopla de Escamas',
         type: 'Luva',
@@ -596,7 +596,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 307,
+        _id: 307,
         imageSource: '',
         name: 'Manopla de Latão',
         type: 'Luva',
@@ -611,7 +611,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 308,
+        _id: 308,
         imageSource: '',
         name: 'Manopla de Bronze',
         type: 'Luva',
@@ -626,7 +626,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 309,
+        _id: 309,
         imageSource: '',
         name: 'Manopla de Aço',
         type: 'Luva',
@@ -641,7 +641,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 310,
+        _id: 310,
         imageSource: '',
         name: 'Manopla de Placas',
         type: 'Luva',
@@ -655,7 +655,7 @@ export const items: Item[] = [
         minLevel: 1,
     },
     {
-        id: 400,
+        _id: 400,
         imageSource: '',
         name: 'Capuz de Algodao',
         type: 'Capacete',
@@ -669,7 +669,7 @@ export const items: Item[] = [
          minLevel: 1,
     },
     {
-        id: 401,
+        _id: 401,
         imageSource: '',
         name: 'Elmo de Couro',
         type: 'Capacete',
@@ -684,7 +684,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 402,
+        _id: 402,
         imageSource: '',
         name: 'Capuz de Couro',
         type: 'Capacete',
@@ -699,7 +699,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 403,
+        _id: 403,
         imageSource: '',
         name: 'Elmo de Osso',
         type: 'Capacete',
@@ -714,7 +714,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 404,
+        _id: 404,
         imageSource: '',
         name: 'Capuz de Couro',
         type: 'Capacete',
@@ -729,7 +729,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 405,
+        _id: 405,
         imageSource: '',
         name: 'Capuz de Malha',
         type: 'Capacete',
@@ -744,7 +744,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 406,
+        _id: 406,
         imageSource: '',
         name: 'Elmo de Escamas',
         type: 'Capacete',
@@ -759,7 +759,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 407,
+        _id: 407,
         imageSource: '',
         name: 'Elmo de Latão',
         type: 'Capacete',
@@ -774,7 +774,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 408,
+        _id: 408,
         imageSource: '',
         name: 'Elmo de Bronze',
         type: 'Capacete',
@@ -789,7 +789,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 409,
+        _id: 409,
         imageSource: '',
         name: 'Elmo de Aço',
         type: 'Capacete',
@@ -804,7 +804,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 410,
+        _id: 410,
         imageSource: '',
         name: 'Elmo de Placas',
         type: 'Capacete',
@@ -818,7 +818,7 @@ export const items: Item[] = [
         minLevel: 1,
     },
     {
-        id: 1000,
+        _id: 1000,
         imageSource: '',
         name: 'Staff de Madeira',
         type: 'Arma',
@@ -832,7 +832,7 @@ export const items: Item[] = [
         minLevel: 1,
     },
     {
-        id: 1001,
+        _id: 1001,
         imageSource: '',
         name: 'Rod de Madeira',
         type: 'Arma',
@@ -847,7 +847,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 1002,
+        _id: 1002,
         imageSource: '',
         name: 'Greatsword de Madeira',
         type: 'Arma',
@@ -862,7 +862,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 1003,
+        _id: 1003,
         imageSource: '',
         name: 'Sword de Madeira',
         type: 'Arma',
@@ -877,7 +877,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 1004,
+        _id: 1004,
         imageSource: '',
         name: 'Bow de Madeira',
         type: 'Arma',
@@ -891,7 +891,7 @@ export const items: Item[] = [
         minLevel: 1,
     },
     {
-        id: 1005,
+        _id: 1005,
         imageSource: '',
         name: 'Shield de Madeira',
         type: 'Arma',
@@ -905,7 +905,7 @@ export const items: Item[] = [
         minLevel: 1,
     },
     {
-        id: 1006,
+        _id: 1006,
         imageSource: '',
         name: 'Dagger de Madeira',
         type: 'Arma',
@@ -919,7 +919,7 @@ export const items: Item[] = [
         minLevel: 1,
     },
     {
-        id: 1007,
+        _id: 1007,
         imageSource: '',
         name: 'Staff de Aço',
         type: 'Arma',
@@ -933,7 +933,7 @@ export const items: Item[] = [
         minLevel: 1,
     },
     {
-        id: 1008,
+        _id: 1008,
         imageSource: '',
         name: 'Rod de Aço',
         type: 'Arma',
@@ -948,7 +948,7 @@ export const items: Item[] = [
 
     },
     {
-        id: 1009,
+        _id: 1009,
         imageSource: '',
         name: 'Greatsword de Aço',
         type: 'Arma',
@@ -962,7 +962,7 @@ export const items: Item[] = [
         minLevel: 1,
     },
     {
-        id: 1010,
+        _id: 1010,
         imageSource: '',
         name: 'Sword de Aço',
         type: 'Arma',
@@ -976,7 +976,7 @@ export const items: Item[] = [
         minLevel: 1,
     },
     {
-        id: 1011,
+        _id: 1011,
         imageSource: '',
         name: 'Shield de Aço',
         type: 'Arma',
@@ -990,7 +990,7 @@ export const items: Item[] = [
         minLevel: 1,
     },
     {
-        id: 1012,
+        _id: 1012,
         imageSource: '',
         name: 'Bow de Aço',
         type: 'Arma',
@@ -1004,7 +1004,7 @@ export const items: Item[] = [
         minLevel: 1,
     },
     {
-        id: 1013,
+        _id: 1013,
         imageSource: '',
         name: 'Dagger de Aço',
         type: 'Arma',

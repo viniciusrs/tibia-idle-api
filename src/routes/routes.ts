@@ -36,8 +36,8 @@ export class Routes {
 
         // Item
         app.route('/item/all').get((req: Request, res: Response) => this.itemController.getAllItems(req, res));
-        app.route('/item/shop').get((req: Request, res: Response) => this.itemController.getShopItems(req, res));
         app.route('/item/:id').get((req: Request, res: Response) => this.itemController.getItemById(req, res));
+        app.route('/item/shop/:level').get((req: Request, res: Response) => this.itemController.getShopItems(req, res));
 
         //Hunt
         app.route('/hunt/start').post(this.userMiddleware.verifyToken, (req: Request, res: Response) => this.huntController.startHunt(req, res));

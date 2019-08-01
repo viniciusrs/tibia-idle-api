@@ -16,7 +16,7 @@ export class ItemController {
         }
 
         const itemId = req.params.id;
-        const itemData: Item = items.find(val => val.id == itemId);
+        const itemData: Item = items.find(val => val._id == itemId);
         if (!itemData){
             res.status(404).send({
                 "teste": "qqqqqqqq",
@@ -48,7 +48,7 @@ export class ItemController {
 
     public getShopItems(req: Request, res: Response): void {
 
-        let charLevel = req.body.level;
+        let charLevel = req.params.level;
 
         console.log(charLevel);
 

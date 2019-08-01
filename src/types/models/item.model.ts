@@ -1,5 +1,5 @@
 export interface Item {
-    id: number,
+    _id: number,
     imageSource: String,
     name: String,
     type: String,
