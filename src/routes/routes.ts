@@ -36,6 +36,7 @@ export class Routes {
         app.route('/character/inv/:id').get((req: Request, res: Response) => this.characterController.getCharInventory(req, res));
 
         // Item
+        app.route('/item/buy').post((req: Request, res: Response) => this.itemController.buyItem(req, res));
         app.route('/item/all').get((req: Request, res: Response) => this.itemController.getAllItems(req, res));
         app.route('/item/:id').get((req: Request, res: Response) => this.itemController.getItemById(req, res));
         app.route('/item/shop/:level').get((req: Request, res: Response) => this.itemController.getShopItems(req, res));

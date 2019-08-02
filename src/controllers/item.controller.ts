@@ -95,7 +95,7 @@ export class ItemController {
             return;
         }
 
-        Character.find({_id: characterId}, (err, character) => {
+        Character.find({$and: [{userId: characterId}, {active: true}]}, (err, character) => {
             if(err) {
                 res.send(err);
                 return;
@@ -130,6 +130,7 @@ export class ItemController {
                     "message-en": "Inventory is full",
                     "message-pt": "Inventário está cheio"
                 });
+                console.log('aqui');
                 return;
             }
 
