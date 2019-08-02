@@ -44,6 +44,35 @@ export class HuntController {
         return;
     }
 
+    /*public getPossibleHunt(req: Request, res: Response): void {
+        
+        let cityId = req.params.id;
+        let level = req.params.lvl;
+
+        const { data } = getHuntsByCity(cityId);
+
+        let huntPossible: Hunt[] = [];
+
+        data.map(value => {
+            if(level >= value.power){
+                huntByLevel.push(value);
+            }
+
+        });
+
+        if(!huntPossible.length) {
+            res.status(404).send({
+                "message-en": "Hunts not found",
+                "message-pt": "Hunts não encontradas"
+            });
+
+            return;
+        }
+
+        res.json(huntPossible);
+        return;
+    }*/
+
     public startHunt(req: Request, res: Response): void {
         const characterId = req.body.characterId;
         const huntId = req.body.huntId;

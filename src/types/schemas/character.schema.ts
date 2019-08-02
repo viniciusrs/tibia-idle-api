@@ -71,6 +71,10 @@ export const CharacterSchema = new Schema({
         type: [Number],
         required: true
     },
+    bagSize: {
+        type: Number,
+        required: true
+    },
     active: {
         type: Boolean,
         required: true

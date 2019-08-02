@@ -33,6 +33,7 @@ export class Routes {
         app.route('/character/new').post(this.userMiddleware.verifyToken, (req: Request, res: Response) => this.characterController.newCharacter(req, res));
         app.route('/character/:id').get(this.userMiddleware.verifyToken, (req: Request, res: Response) => this.characterController.getCharacter(req, res));
         app.route('/character/all/:id').get(this.userMiddleware.verifyToken, (req: Request, res: Response) => this.characterController.getAllCharacters(req, res));
+        app.route('/character/inv/:id').get((req: Request, res: Response) => this.characterController.getCharInventory(req, res));
 
         // Item
         app.route('/item/all').get((req: Request, res: Response) => this.itemController.getAllItems(req, res));

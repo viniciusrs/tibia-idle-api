@@ -4,7 +4,16 @@ import { Request, Response } from "express";
 import { items } from '../constants/items'
 import { Item } from '../types/models/item.model'
 
+import { Character } from "../types/models/character.model";
+import { CharacterSchema } from "../types/schemas/character.schema";
+import { CharacterController } from "./character.controller";
+
+const Character = mongoose.model('Character', CharacterSchema);
+
 export class ItemController {
+
+    private characterController: CharacterController = new CharacterController();
+
     constructor() {
 
     }
@@ -19,7 +28,6 @@ export class ItemController {
         const itemData: Item = items.find(val => val._id == itemId);
         if (!itemData){
             res.status(404).send({
-                "teste": "qqqqqqqq",
                 "message-en": "Item not found",
                 "message-pt": "Item não encontrado"
             });
@@ -70,6 +78,82 @@ export class ItemController {
 
         res.json(shopItems);
         return;
+    }
+
+    public buyItem(req: Request, res: Response): void {
+        // CharID e ItemID
+        let characterId = req.body.characterId;
+        let itemId = req.body.itemId;
+
+        const itemData: Item = items.find(val => val._id == itemId);
+
+        if (!itemData){
+            res.status(404).send({
+                "message-en": "Item not found",
+                "message-pt": "Item não encontrado"
+            });
+            return;
+        }
+
+        Character.find({_id: characterId}, (err, character) => {
+            if(err) {
+                res.send(err);
+                return;
+            }
+
+            if(!character.length) {
+                res.status(404).send({
+                    "message-en": "Character not found",
+                    "message-pt": "Personagem não encontrado"
+                });
+
+                return;
+            }
+
+            let char: Character = this.characterController.mapCharacter(character) as Character;
+
+            if(!char) {
+                res.sendStatus(500);
+                return;
+            }
+
+            if(char.balance < itemData.buyPrice) {
+                res.status(200).send({
+                    "message-en": "Not enough gold",
+                    "message-pt": "Ouro insuficiente"
+                });
+                return;
+            }
+
+            if(char.bagSize <= char.listInventory.length) {
+                res.status(200).send({
+                    "message-en": "Inventory is full",
+                    "message-pt": "Inventário está cheio"
+                });
+                return;
+            }
+
+            char.listInventory.push(itemId);
+
+            Character.findOneAndUpdate({ _id: char.id }, char, { new: true }, (err, char) => {
+                if(err){
+                    res.send(err);
+                    return;
+                }
+                res.sendStatus(200);
+                return;
+            });
+
+
+
+        });
+    }
+
+    public sellItem(req: Request, res: Response): void {
+        // CharID e ItemID
+        let charId = req.body.charId;
+        let itemId = req. body.itemId;
+        
     }
 
 

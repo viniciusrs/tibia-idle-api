@@ -2,10 +2,11 @@ import * as mongoose from "mongoose";
 import { Request, Response } from "express";
 
 import { CharacterSchema } from '../types/schemas/character.schema';
-
 import { Character } from "../types/models/character.model";
-
 const Character = mongoose.model('Character', CharacterSchema);
+
+import { items } from '../constants/items'
+import { Item } from '../types/models/item.model'
 
 export class CharacterController {
     
@@ -106,6 +107,8 @@ export class CharacterController {
                     mainLocationId: val.get('mainLocationId'),
                     balance: val.get('balance'),
                     stamina: val.get('stamina'),
+                    listInventory: val.get('listInventory'),
+                    bagSize: val.get('bagSize'),
                     active: val.get('active')
                 })
             });
@@ -132,11 +135,46 @@ export class CharacterController {
                     mainLocationId: val.get('mainLocationId'),
                     balance: val.get('balance'),
                     stamina: val.get('stamina'),
+                    listInventory: val.get('listInventory'),
+                    bagSize: val.get('bagSize'),
                     active: val.get('active')
                 }
             });
 
             return char;
         }
+    }
+
+    public getCharInventory(req: Request, res: Response): void {
+
+        Character.find({$and: [{userId: req.params.id}, {active: true}]}, (err, character) => {
+            if(err) {
+                res.send(err);
+                return;
+            }
+
+            if(!character.length) {
+                res.status(401).send({
+                    "message-en": "This account doesn't have a character yet",
+                    "message-pt": "Está conta ainda não possui um personagem"
+                });
+
+                return;
+            }
+
+            let char: Character = this.mapCharacter(character) as Character;
+            let itemList: Item[] = [];
+
+            char.listInventory.map(id => {
+                itemList.push(items.find(val => val._id === id));
+            });
+
+            res.json(itemList);
+            return;
+            
+        })
+
+
+
     }
 }

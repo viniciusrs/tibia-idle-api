@@ -15,5 +15,7 @@ export interface Character {
     mainLocationId: number,
     balance: number,
     stamina: number,
+    listInventory: number[],
+    bagSize: number,
     active: Boolean
 }
